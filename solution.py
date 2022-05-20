@@ -9,9 +9,9 @@ class Solution(object):
                     common += word1[char]
             common += " "
         commonList = common.split()
-        if len(commonList) == 1:
-            return "".join(commonList)
-        return self.longestCommonPrefix(commonList)
+        if len(commonList) > 1:
+            return self.longestCommonPrefix(commonList)
+        return "".join(commonList)
                 
         """
         :type strs: List[str]
@@ -20,3 +20,4 @@ class Solution(object):
         
         
 print(Solution().longestCommonPrefix(["flower","flow","flight"]))
+print(Solution().longestCommonPrefix(["dog","racecar","car"]))
